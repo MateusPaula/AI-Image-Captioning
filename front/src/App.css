@@ -1,0 +1,19 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.url-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.captioned-image {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+  gap: 10px
+}
