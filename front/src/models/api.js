@@ -16,4 +16,16 @@ async function translate(captionENG) {
   );
 }
 
-export { generateCaption, translate }
+async function convertToAudio(captionPTBR) {
+  return fetch("http://localhost:5001/text_to_audio", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({"text": captionPTBR[0].translation_text})
+  }).then(
+    resp => resp.json()
+  );
+}
+
+export { generateCaption, translate, convertToAudio }
